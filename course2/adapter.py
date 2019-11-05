@@ -14,6 +14,6 @@ class MappingAdapter:
 					obstacles.append((i, j))
 		self.adaptee.set_lights(lights)
 		self.adaptee.set_obstacles(obstacles)
-		return self.adaptee.generate_lights()
+		return self.adaptee.grid
 		
 		
