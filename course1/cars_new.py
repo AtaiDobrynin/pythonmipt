@@ -36,6 +36,7 @@ class Truck(CarBase):
 	def get_body_volume(self):
 		return self.body_height * self.body_width * self.body_length
 
+		
 class SpecMachine(CarBase):
 	car_type = "spec_machine"
 	def __init__(self, brand, photo_file_name, carrying, extra):

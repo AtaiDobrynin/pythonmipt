@@ -5,13 +5,11 @@ from functools import wraps
 def to_json(func):
 	@wraps(func)
 	def wrapper(*args, **kwargs):
-		return json.dumps(func(*args, **kwargs))
+		result = func(*args, **kwargs)
+		return json.dumps(result)
 	return wrapper
-'''
-@to_json
-def get_data():
-  return {
-    'data': 43
-  }
-print(get_data())
-'''
+
+@to_json	
+def get_data(a, b):
+	return [a, b]
+print(get_data(25, 15))
