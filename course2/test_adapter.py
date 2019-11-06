@@ -1,4 +1,4 @@
-from adapter import MappingAdapter
+from adapter_pattern import MappingAdapter
 
 
 class Light:
