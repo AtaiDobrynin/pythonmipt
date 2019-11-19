@@ -9,7 +9,7 @@
 запускаете этот скрипт.
 """
 import sys
-from client import Client, ClientSocketError, ClientProtocolError
+from client_authors import Client, ClientSocketError, ClientProtocolError
 
 
 def run(host, port):
@@ -49,6 +49,7 @@ def run(host, port):
 
     try:
         metrics = client1.get("*")
+        print(metrics)
         if metrics != expected_metrics:
             print(f"client.get('*') вернул неверный результат. Ожидается: {expected_metrics}. Получено: {metrics}")
             sys.exit(1)
@@ -80,4 +81,4 @@ def run(host, port):
 
 
 if __name__ == "__main__":
-    run("127.0.0.1", 8888)
+    run("127.0.0.1", 8889)
